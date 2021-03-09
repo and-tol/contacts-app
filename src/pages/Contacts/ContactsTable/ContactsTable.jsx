@@ -54,8 +54,11 @@ export const ContactsTable = ({ data }) => {
               <TableCell>
                 <CopyToClipboardText text={contact.cell} />
               </TableCell>
-              <TableCell>5</TableCell>
-              <TableCell align='right'>5</TableCell>
+              <TableCell>
+                <Typography>{`/${contact.location.country}/`}</Typography>
+                <Typography>{`${contact.location.city}, ${contact.location.street.name} ${contact.location.street.number}`}</Typography>
+              </TableCell>
+              <TableCell align='right'>6</TableCell>
             </TableRow>
           ))}
         </TableBody>
